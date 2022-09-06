@@ -1,0 +1,29 @@
+<!-- pages/recommand/recommand.wxml -->
+<view class="recommandContanier">
+    <!-- 今日推荐头部时间区域 -->
+    <view class="header">
+        <image src="../../static/images/recommendSong/recommendSong.jpg"></image>
+        <view class="data">
+            <text>{{months}}  /</text>
+            <text>{{days}}</text>
+        </view>
+    </view>
+    <!-- 今日推荐头部内容区域 -->
+    <view class="listContanier">
+        <view class="listHeader">
+            <text>播放全部</text>
+            <text class="fr">更多</text>
+        </view>
+        <!-- 今日推荐歌曲内容区域 -->
+        <scroll-view scroll-y class="listScroll">
+            <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" bindtap="playaction" data-song="{{item}}" data-index="{{index}}">
+                <image src="{{item.al.picUrl}}"></image>
+                <view class="musicInfo">
+                    <text class="musicName">{{item.name}}</text>
+                    <text class="author">{{item.ar[0].name}}</text>
+                </view>
+                <text class="iconfont icon-gengduo"></text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

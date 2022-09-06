@@ -1,0 +1,27 @@
+<view class="videoContianer">
+  <!-- 视频页头部区域 -->
+
+  <view class="header">
+    <image src="../../static/images/video/video.jpg"></image>
+    <view class="videoSerch">查找歌单</view>
+    <image src="../../static/images/favicon.ico"></image>
+  </view>
+  <!-- 视频页导航区 -->
+  <scroll-view scroll-x class="navScroll" enable-flex scroll-into-view="{{'big'+navid}}" scroll-with-animation="true">
+    <view class="navItem" wx:for="{{videoList}}" wx:key="id" id="{{'big'+item.id}}">
+      <view class="navContent  {{navid==item.id? 'active': ''}}" bindtap="changeNav" id="{{item.id}}" data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+<!-- 歌单详情页 -->
+<view class="songDetail">
+<view class="songDetailList">
+      <view class="songItem"  wx:for="{{ songDetailList}}" wx:key="index" bindtap="getId" data-index="{{index}}">
+        <image src="{{item.coverImgUrl}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    
+</view>
+</view>
+ </view>

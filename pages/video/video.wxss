@@ -1,0 +1,74 @@
+/* pages/video/video.wxss */
+
+.videoContianer .header {
+    display: flex;
+    padding: 5px;
+}
+
+.videoContianer .header image {
+    width: 30px;
+    height: 30px;
+}
+
+.videoContianer .header .videoSerch {
+    border: 1px solid #eee;
+    flex: 1;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+
+/* 视频导航区 */
+
+.navScroll {
+    display: flex;
+    white-space: nowrap;
+    height: 38px;
+}
+
+.navScroll .navItem {
+    padding: 0 15px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.active {
+    border-bottom: 1px solid #d43c33;
+}
+
+
+/* 歌单详情区 */
+
+.songDetail {
+    height: calc(100vh - 80px);
+   
+}
+.songDetail .songDetailList{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.songDetail .songItem{
+   width: 100px;
+   margin: 10px auto;
+    margin-right: 10px;
+    text-align: center;
+
+}
+.songDetail image{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.songDetail text{
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* 设置对齐模式 */
+  -webkit-line-clamp: 2;
+}

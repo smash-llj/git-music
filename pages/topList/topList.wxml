@@ -1,0 +1,27 @@
+<!--pages/topList/topList.wxml-->
+<view class="topListDate">
+<view class="topTitle"> 排行榜</view>
+<view class="item" wx:for="{{ListDate}}" wx:key="index">
+<view class="l">
+
+<image src="{{item.coverImgUrl}}"></image>
+</view>
+<view class="r">
+
+
+<view class="Listcontainer">
+<view wx:for="{{item.tracks}}" wx:key="index" class="info">
+<view class="sName">{{item.first}}</view>
+<view class="aName">{{item.second}}</view>
+</view>
+</view>
+
+</view>
+</view>
+<view class="topTitle"> 精选排行榜</view>
+<view class="topImage">
+<view class="imgItem" wx:for="{{itemImg}}" wx:key="index">
+<image src="{{item.coverImgUrl}}"></image>
+</view>
+</view>
+</view>

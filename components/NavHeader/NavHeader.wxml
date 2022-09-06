@@ -1,0 +1,8 @@
+<!--components/NavHeader/NavHeader.wxml-->
+<view class="tuijian">
+  <view class="bottom">
+  <text class="fl">{{nav}}</text>
+ <text class="ri" >查看更多</text>
+  </view>
+  </view>
+

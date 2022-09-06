@@ -1,0 +1,94 @@
+/* 头部区域搭建 */
+
+.recommandContanier .header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.recommandContanier .header image {
+    width: 100%;
+    height: 100%;
+}
+
+.data {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -70px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+
+/* 今日推荐内容区域头部 */
+
+.listContanier {
+    position: relative;
+    top: -10px;
+    /* 这里要实现圆角效果添加定位，让其优先显示 */
+    padding: 0 10px;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.listHeader {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.listHeader .fr {
+    float: right;
+}
+
+
+/* 今日推荐歌曲内容区域 */
+
+.listScorll {
+    height: calc(100vh - 190px);
+}
+
+.scrollItem {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   
+    border-radius: 10px;
+}
+
+.scrollItem image {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.musicInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.musicInfo text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.scrollItem .iconfont {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+}

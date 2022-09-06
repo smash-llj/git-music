@@ -1,0 +1,8 @@
+<!--pages/songtext/songtext.wxml-->
+<view class="songcontainer">
+<scroll-view scroll-y class="mx">
+  <view class="scrollitem">
+
+  </view>
+</scroll-view>
+</view>

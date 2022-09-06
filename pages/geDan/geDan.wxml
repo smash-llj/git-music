@@ -1,0 +1,29 @@
+<!--pages/geDan/geDan.wxss.wxml-->
+<view class="deDanContaienr">
+<view class="geDanTop">
+<view class="l">
+<image src="{{geDanDate.coverImgUrl}}"></image>
+</view>
+<view class="r">
+<view class="title">{{geDanDate.name}}</view>
+<view class="author">
+<image src="{{geDanDate.creator.avatarUrl}}"></image>
+<view class="authorName">
+  {{geDanDate.creator.nickname}}
+</view>
+</view>
+</view>
+</view>
+<view class="geDanSongList">
+  <scroll-view scroll-y class="listScroll">
+            <view class="scrollItem" wx:for="{{geDanDate.tracks}}" wx:key="index"
+            bindtap="playSong" data-song="{{item}}" data-index="{{index}}">
+                <image src="{{item.al.picUrl}}"></image>
+                <view class="musicInfo">
+                    <text class="musicName">{{item.name}}</text>
+                    <text class="songauthor">{{item.ar[0].name}}</text>
+                </view>
+            </view>
+        </scroll-view>
+</view>
+</view>

@@ -1,0 +1,91 @@
+/* pages/geDan/geDan.wxss.wxss */
+.deDanContaienr{
+  height: 100vh;
+}
+.geDanTop{
+  display: flex;
+  background-color: #B0A8B9;
+}
+.l{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* background-color: aqua; */
+}
+.geDanTop .l image{
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.r{
+  position: relative;
+  top: 50px;
+  width: 200px;
+  height: 100px;
+  /* background-color: aqua; */
+}
+.r .title{
+  margin: 10px auto;
+  font-size: 17px;
+  color: aquamarine;
+}
+
+
+/* 歌单歌曲列表 */
+.listScorll {
+  height: calc(100vh - 190px);
+  
+}
+
+.scrollItem {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.scrollItem image {
+  margin: 0 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.musicInfo text {
+  height: 30px;
+  line-height: 20px;
+
+}
+.musicName{
+  font-size: 20px;
+}
+.author{
+  display: flex;
+  position: relative;
+}
+.author image{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+margin: 5px 5px;
+}
+.authorName{
+  position: absolute;
+  top: 15px;
+  left: 60px;
+  color: black;
+}

@@ -1,0 +1,49 @@
+{
+  "pages": [
+   
+    "pages/home/home",
+    "pages/video/video",
+    "pages/geDan/geDan",
+    "pages/songserch/songserch",
+    "pages/songtext/songtext",
+    "pages/login/login",
+    "pages/recommand/recommand",
+    "pages/playsong/playsong",
+    "pages/personal/personal",
+    "pages/topList/topList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43d33",
+    "navigationBarTitleText": "聆音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/pages/images/iconmonstr-home-thin-240.png",
+        "selectedIconPath": "/pages/images/iconmonstr-building-2-240.png"
+      },
+      {
+        "pagePath": "pages/songserch/songserch",
+        "text": "搜索",
+        "iconPath": "/static/images/iconmonstr-search-thin-240.png",
+        "selectedIconPath": "/static/images/iconmonstr-magnifier-11-240.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/pages/images/我的_me.png",
+        "selectedIconPath": "/pages/images/人员_people.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ]
+}

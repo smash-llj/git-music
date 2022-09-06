@@ -1,0 +1,80 @@
+/* pages/topList/topList.wxss */
+.topListDate{
+  height: 100vh;
+  
+}
+.topTitle{
+  font-size: 20px;
+  margin: 30px 20px;
+}
+.item{
+  display: flex;
+  width: 90vw;
+  height: 230px;
+  margin: 10px auto;
+  margin-bottom: 40px;
+background-color: #fbfbfb;
+}
+.l{
+  width: 140px;
+position: relative;
+
+}
+.item .l image{
+ position: absolute;
+ top: 10px;
+  width: 160px;
+  height: 200px;
+}
+
+.item .r{
+  position: relative;
+  width: 200px;
+  height: 200px;
+
+}
+.r .title{
+
+ padding: 10px 10px;
+ color:red;
+ text-align: right;
+}
+.item .r .Listcontainer{
+ 
+  position: absolute;
+  top: 10px;
+  height: 150px;
+  text-align: center;
+ 
+}
+.item .r .Listcontainer .info{
+  margin-left: 30px;
+}
+.item .r .Listcontainer .sName{
+  font-size: 16px;
+  color: black;
+margin: 10px auto;
+}
+.item .r .Listcontainer .aName{
+  font-size: 14px;
+  color: black;
+
+}
+
+.topImage{
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+.imgItem{
+ 
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+}
+.imgItem image{
+  width: 150px;
+  height: 150px;
+}

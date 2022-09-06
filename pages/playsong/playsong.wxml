@@ -1,0 +1,76 @@
+<view class="playSongContanier">
+  <!-- 顶部歌曲名和歌曲图片 -->
+  <swiper class="topslide">
+  <swiper-item class="swiperitem">
+    <view class="songtop">
+    <view class="songdetail">
+      <view class="author">{{songplaydata.name}}</view>
+      <view class="authorname">{{songplaydata.ar[0].name}}</view>
+    </view>
+    <view class="circle"></view>
+  <image src="../../static/images/song/needle.png" class="need {{isplay&&'activesong'}}"></image>
+    <view class="discontainer {{isplay&& 'addanimation'}}">
+      <image src="../../static/images/song/disc.png" class="disc" bindtap="jopsongtext"></image>
+      <image src="{{ songplaydata.al.picUrl}}" class="songpic"></image>
+  
+    </view>
+    <view class="scrollLrc">
+    <text class="infoTitle">{{currentLyric}}</text>
+  </view>
+  </view>
+  </swiper-item>
+  <!-- 歌手更多歌曲界面 -->
+  <swiper-item class="swiperitem" >
+  <view class="authorgeci">
+    <view class="author">{{songplaydata.name}}</view>
+    <view class="authorname">{{songplaydata.ar[0].name}}</view>
+  </view>
+<view class="playVedio">
+<view class="MoreTitle">更多热门歌曲</view>
+<view class="ListMore">
+<scroll-view scroll-y class="listScroll">
+  <view class="ListMoreItem" wx:for="{{MoreList}}" wx:key="index" bindtap="playMore" data-more="{{item}}">
+             <image src="{{item.al.picUrl}}"></image>  
+                <view class="musicInfo">
+                    <text class="musicName">{{item.name}}</text>
+                    <view class="author">{{item.ar[0].name}}</view>
+                </view>
+                
+            </view>
+          </scroll-view>
+</view>
+           
+       
+
+</view>
+
+
+ 
+ 
+
+
+  </swiper-item>
+  
+</swiper>
+  <!-- //进度条 -->
+  <view class="playsongcontrol">
+    <text>{{currentdata}}</text>
+    <!-- 歌曲动态进度条 -->
+    <view class="barcontrol">
+      <!-- 播放进度 -->
+      <view class="radircontrol" style="width:{{currentwidth+'px'}}">
+        <!-- 播放进度小圆球 -->
+        <view class="autocircle"></view>
+      </view>
+    </view>
+    <text>{{sumtime}}</text>
+  </view>
+  <!-- 底部控制区域 -->
+  <view class="musicControl">
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+    <text class="iconfont icon-shangyishou" bindtap="nextplaysong" id="before"></text>
+    <text class="iconfont {{isplay? 'icon-zanting ':'icon-bofang '}} big" bindtap="playsongs"></text>
+    <text class="iconfont icon-next" bindtap="nextplaysong" id="after"></text>
+    <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+  </view>
+</view>

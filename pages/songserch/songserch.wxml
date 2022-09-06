@@ -1,0 +1,46 @@
+<!-- pages/songserch/songserch.wxml -->
+<view class="serch">
+  <!-- 头部区域 -->
+  <view class="serchheader">
+    <view class="serchinput">
+      <text class="iconfont icon-search1 serchicon"></text>
+      <input type="text" placeholder="{{placeholderdata}}" bindinput="changeinput" />
+    </view>
+    <text class="cancel" bindtap="playserchsong">搜索</text>
+  </view>
+  <!-- 搜索内容展示区 -->
+  <block wx:if="{{serchsongdata.length}}">
+    <view class="serchcontext">
+      <view class="serchcontainershow">搜索内容：{{serchsongdata}}</view>
+      <view class="serchlistshow">
+        <view class="serchlistitem" wx:for="{{serchsonglistdata}}" wx:key="id" bindtap="playsong" data-index="{{index}}">
+          <text class="iconfont icon-search1"></text>
+          <text class="cx">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 热搜榜 -->
+  <block wx:else>
+    <!-- 搜索历史记录 -->
+    <view class="serchhistroy">
+      <view class="title">历史记录</view>
+      <view class="histroyitem">滴滴</view>
+      <!-- 删除图标 -->
+      <view class="iconfont icon-shanchu delate"></view>
+    </view>
+    <view class="hotcontanier">
+      <view class="title">
+        <text>热搜榜</text>
+      </view>
+      <view class="hotlist">
+        <view class="hotitem" wx:for="{{hotlist}}" wx:key="index" bindtap="serchld" data-ld="{{item.searchWord}}">
+          <text class="order">{{index+1}}</text>
+          <text class="hotsong">{{item.searchWord}}</text>
+          <!-- 获取热度高的歌曲小图片 -->
+          <image class="hotpic" wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

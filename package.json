@@ -1,0 +1,19 @@
+{
+ 
+  "name": "wxtest",
+ 
+  "version": "1.0.0",
+ 
+  "dependencies": {
+ 
+   
+  "axios": "^0.27.2",
+ 
+   
+  "dayjs": "^1.11.3",
+ 
+   
+  "pubsub-js": "^1.9.4"
+ 
+  }
+}
